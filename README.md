@@ -1,2 +1,3 @@
 # extension-sample
-Sample browser extension
+
+An extension to record things in a browser.

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Sample Extension</title>
+        <style>
+            body {
+                min-width: 350px;
+                max-width: 350px;
+                min-height: 100px;
+                max-height: 100px;
+            }
+        </style>
+    </head>
+    <body id="main">
+        <h1>Sample Extension</h1>
+        <input type="button" value="Stop"/>
+        <input type="button" value="Pause"/>
+        <input type="button" value="Record"/>
+        <h3>Events</h3>
+        <table id="eventTable">
+            <tr>
+                <td>got event</td>
+                <td><i>click</i></td>
+                <td>on target <b>textfield</b></td>
+            </tr>
+            <tr>
+                <td>got event</td>
+                <td><i>type</i></td>
+                <td>in target <b>textfield</b></td>
+            </tr>
+        </table>
+        <p>
+            <span>Clicks: </span><b><span id="clicks">0</span></b>
+        </p>
+    </body>
+
+    <script src="scripts/index.js"></script>
+</html>

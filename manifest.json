@@ -1,0 +1,36 @@
+{
+  "manifest_version": 2,
+  "name": "Sample Extension",
+  "description": "Sample Extension",
+  "version": "0.1",
+  "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'",
+  "permissions": [
+    "tabs",
+    "declarativeContent",
+    "background"
+  ],
+  "browser_action": {
+    "default_icon": {
+      "16": "icons/font-awesome_4-7-0_stop_16.png",
+      "24": "icons/font-awesome_4-7-0_stop_24.png",
+      "32": "icons/font-awesome_4-7-0_stop_32.png",
+      "48": "icons/font-awesome_4-7-0_stop_48.png",
+      "64": "icons/font-awesome_4-7-0_stop_64.png",
+      "128": "icons/font-awesome_4-7-0_stop_128.png"
+    },
+    "default_title": "Sample Extension",
+    "default_popup": "app/index.html"
+  },
+  "content_scripts": [{
+    "matches": ["*://*/*"],
+    "run_at": "document_end",
+    "all_frames": false,
+    "js": ["app/scripts/content.js"]
+  }],
+  "background": {
+    "persistent": true,
+    "scripts": [
+      "app/scripts/background.js"
+    ]
+  }
+}
